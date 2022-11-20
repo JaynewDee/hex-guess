@@ -1,0 +1,115 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: monospace;
+}
+
+.color-box {
+  height: 400px;
+  width: 400px;
+  margin: 2rem auto 4rem;
+  border-radius: 3px;
+  transition: all 0.5s;
+  box-shadow: 2px 2px 50px 1px rgba(0, 0, 0, 0.631);
+}
+
+.color-btn {
+  padding: 0.5rem;
+  margin: 1rem 0.33rem;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+.color-btn:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  box-shadow: 0px 0px 50px 1px rgba(83, 83, 83, 0.344);
+}
+
+.help-box {
+  display: flex;
+  justify-content: flex-end;
+}
+.help-btn {
+  font-style: bolder;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.help-btn:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.help-modal {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  width: 95%;
+  min-height: 66vh;
+  background-color: #141414d5;
+  animation: expand 0.5s linear;
+}
+.modal-exit-btn {
+  margin-left: 97%;
+}
+.title {
+  font-size: 2rem;
+  margin: 6rem auto 3rem;
+}
+.feedback-box {
+  font-size: 1.5rem;
+  margin: 6rem auto 3rem;
+}
+.streak-num {
+  font-size: 3rem;
+}
+
+.streak-label {
+  padding-top: 1rem;
+  font-size: 0.66rem;
+  text-decoration: overline;
+  opacity: 0.6;
+}
+
+@keyframes flash-wrong {
+  0% {
+    outline: 0px;
+  }
+  25% {
+    outline: 5px solid red;
+  }
+  50% {
+    outline: 0px;
+  }
+  75% {
+    outline: 3px solid red;
+  }
+  100% {
+    outline: 0px;
+  }
+}
+
+@keyframes glow-correct {
+  0% {
+    outline: 5px solid green;
+  }
+  100% {
+    outline: 5px solid green;
+  }
+}
+
+@keyframes expand {
+  0% {
+    position: absolute;
+    width: 0;
+    min-height: 0vh;
+    background-color: #141414d5;
+  }
+  100% {
+    position: absolute;
+    width: 97%;
+    min-height: 66vh;
+    background-color: #141414d5;
+  }
+}
